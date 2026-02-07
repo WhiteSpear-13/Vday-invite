@@ -21,17 +21,25 @@
         margin-bottom: 25px;
     }
 
-    img {
-        width: 100%;
-        max-width: 300px;
-        border-radius: 15px;
-        margin: 10px;
-    }
-
     .gallery {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 10px; /* space between images */
+    }
+
+    .gallery img {
+        max-width: 240px; /* max size */
+        width: auto;       /* keep original aspect ratio */
+        height: auto;      /* keep original aspect ratio */
+        border-radius: 15px;
+    }
+
+    /* Mobile-friendly tweaks */
+    @media (max-width: 500px) {
+        .gallery img {
+            max-width: 180px;
+        }
     }
 </style>
 </head>
